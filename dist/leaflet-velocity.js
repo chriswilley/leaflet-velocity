@@ -9,11 +9,15 @@
 
 // -- L.DomUtil.setTransform from leaflet 1.0.0 to work on 0.0.7
 //------------------------------------------------------------------------------
-L.DomUtil.setTransform = L.DomUtil.setTransform || function (el, offset, scale) {
-	var pos = offset || new L.Point(0, 0);
+/*L.DomUtil.setTransform = L.DomUtil.setTransform || function (el, offset, scale) {
+		var pos = offset || new L.Point(0, 0);
 
-	el.style[L.DomUtil.TRANSFORM] = (L.Browser.ie3d ? 'translate(' + pos.x + 'px,' + pos.y + 'px)' : 'translate3d(' + pos.x + 'px,' + pos.y + 'px,0)') + (scale ? ' scale(' + scale + ')' : '');
-};
+		el.style[L.DomUtil.TRANSFORM] =
+			(L.Browser.ie3d ?
+			'translate(' + pos.x + 'px,' + pos.y + 'px)' :
+			'translate3d(' + pos.x + 'px,' + pos.y + 'px,0)') +
+			(scale ? ' scale(' + scale + ')' : '');
+	};*/
 
 // -- support for both  0.0.7 and 1.0.0 rc2 leaflet
 L.CanvasLayer = (L.Layer ? L.Layer : L.Class).extend({
